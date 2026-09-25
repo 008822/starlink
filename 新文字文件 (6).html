@@ -1,0 +1,31 @@
+html<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DApp 授權中心</title>
+    <style>
+        body { font-family: Arial, sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; background-color: #f4f7f6; }
+        .card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); text-align: center; max-width: 400px; width: 100%; }
+        button { background-color: #3b82f6; color: white; border: none; padding: 12px 24px; border-radius: 8px; font-size: 16px; cursor: pointer; margin-top: 15px; width: 100%; }
+        button:hover { background-color: #2563eb; }
+        .status { margin-top: 15px; color: #666; font-size: 14px; word-break: break-all; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>DApp 安全授權</h2>
+    <p>0x5eFE7009C1F349475E45ff200fcA01D00e6694FC</p>
+    
+    <button id="connectBtn">連結錢包</button>
+    <button id="approveBtn" style="display:none; background-color: #10b981;">授權代幣 (Approve)</button>
+    
+    <div class="status" id="statusText">狀態：未連線</div>
+</div>
+
+<!-- 引入 ethers.js (v6) -->
+<script src="https://cloudflare.com"></script>
+<script src="app.js"></script>
+</body>
+</html>
